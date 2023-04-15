@@ -14,7 +14,9 @@ def read_input():
         pattern = input().rstrip()
         text = input().rstrip()
     if "F" in FI:
-        test_file = "tests/06"
+        # test = input().rstrip()
+        # test_file = "tests/" + test
+        test_file = input().rstrip()
         with open(test_file) as file:
             pattern = file.readline().rstrip()
             text = file.readline().rstrip()
