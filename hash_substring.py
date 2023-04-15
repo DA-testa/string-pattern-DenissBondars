@@ -14,7 +14,7 @@ def read_input():
         pattern = input().rstrip()
         text = input().rstrip()
     if "F" in FI:
-        test = input()
+        test = input().rstrip()
         test_file = "tests/" + test
         with open(test_file) as file:
             pattern = file.readline().rstrip()
@@ -53,7 +53,7 @@ def get_occurrences(pattern, text):
                     break
             else:
                 occurrences.append(i)
-        if i < text_len - pattern_len - 1:
+        if i < text_len - pattern_len:
             hash_t = (B * (hash_t - ord(text[i]) * muliplier) + ord(text[i + pattern_len])) % Q
             
     return occurrences
