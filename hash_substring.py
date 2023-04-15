@@ -8,6 +8,7 @@ def read_input():
     # read two lines 
     # first line is pattern 
     # second line is text in which to look for pattern 
+
     FI = input()
     if "I" in FI:
         pattern = input().rstrip()
@@ -25,11 +26,8 @@ def read_input():
 
 def print_occurrences(output):
     # this function should control output, it doesn't need any return
-    out = ' '.join(map(str, output))
-    if out.endswith(' '):
-        out = out[:-1]
-    print(out)
-    
+    print(' '.join(map(str, output)))
+
 def get_occurrences(pattern, text):
     # this function should find the occurances using Rabin Karp alghoritm 
     # and return an iterable variable
@@ -55,7 +53,7 @@ def get_occurrences(pattern, text):
                     break
             else:
                 occurrences.append(i)
-        if i < text_len - pattern_len:
+        if i < text_len - pattern_len - 1:
             hash_t = (B * (hash_t - ord(text[i]) * muliplier) + ord(text[i + pattern_len])) % Q
             
     return occurrences
