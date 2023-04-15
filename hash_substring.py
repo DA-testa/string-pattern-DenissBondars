@@ -9,7 +9,7 @@ def read_input():
     # first line is pattern 
     # second line is text in which to look for pattern 
 
-    FI = input()
+    FI = input().rstrip()
     if "I" in FI:
         pattern = input().rstrip()
         text = input().rstrip()
