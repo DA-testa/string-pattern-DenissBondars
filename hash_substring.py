@@ -25,8 +25,11 @@ def read_input():
 
 def print_occurrences(output):
     # this function should control output, it doesn't need any return
-    print(' '.join(map(str, output)))
-
+    out = ' '.join(map(str, output))
+    if out.endswith(' '):
+        out = out[:-1]
+    print(out)
+    
 def get_occurrences(pattern, text):
     # this function should find the occurances using Rabin Karp alghoritm 
     # and return an iterable variable
