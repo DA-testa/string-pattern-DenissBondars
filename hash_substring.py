@@ -8,7 +8,6 @@ def read_input():
     # read two lines 
     # first line is pattern 
     # second line is text in which to look for pattern 
-
     FI = input()
     if "I" in FI:
         pattern = input().rstrip()
